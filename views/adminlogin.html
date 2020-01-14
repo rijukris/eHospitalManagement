@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<style type="text/css">
+		body
+  		{
+  			background-color: rgb(247,248,249);
+  		}
+  		.loginn
+  		{
+  			background-color: #e3d8dc;
+  			margin-top: 2%;
+  			margin-left: 35%;
+  			margin-right: 37%;
+  			padding: 2%; 
+  			color: #2E304A;
+  			font-family: 'Bitter',serif;
+  			font-weight: bold;
+  			font-size: 15px;
+  		}
+		.inputcontainer i 
+		{ 
+            position: absolute; 
+        } 
+          
+        .inputcontainer 
+        { 
+            width: 100%; 
+            margin-bottom: 10px; 
+        } 
+          
+        .icon 
+        { 
+            padding: 5px; 
+            color: #2E304A; 
+            min-width: 25px; 
+            text-align: center; 
+        } 
+        .inputcontent 
+        {
+        	padding-left: 25px;
+        	width: 100%;
+        }
+        button
+  		{
+  			background-color: #2E304A;
+  			color: white;
+  			padding-top: 0.5%;
+  			padding-bottom: 0.5%;
+  			padding-left: 5%;
+  			padding-right: 5%;
+  			text-align: center;
+  			margin-left: 36%;
+  		}
+        button:focus
+  		{
+  			border: 1px solid blue;
+  		}
+	</style>
+</head>
+<body>
+	<div style="margin-left: 42%; margin-right: 40%; margin-top: 9%; ">
+		<img src="images/ehosp.png" width="50" height="50"><span style="font-weight: bold; font-family: 'Bitter', serif; font-size: 22px; color: #2E304A;">Admin login</span>
+	</div>
+	<form id="adminloginform">
+	<div class="loginn">
+		<label>Username</label><br>
+		<div class="inputcontainer">
+			<i class="fa fa-user icon"></i>
+			<input class="inputcontent" type="text" name="Username" placeholder="Username" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Username must contain only letters, digits with a minimum of 1 and maximum of 20 characters">
+		</div>
+		<br>
+		<label>Password</label><br>
+		<div class="inputcontainer">
+			<i class="fa fa-key icon"></i> 
+            <input class="inputcontent" type="password" name="Password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number, one uppercase and lowercase letters and at least 8 or more characters">
+		</div>
+		<span>
+			<input type="checkbox" name="remember"><label>&nbsp;Remember me</label>
+			<button type="submit" id="adminlogin">Log In</button>
+		</span>
+	</div>
+	</form>
+</body>
+</html>

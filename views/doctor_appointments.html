@@ -1,0 +1,22 @@
+	<h5 style="text-align: center">Patient Appointments</h5>
+	<table id="doctor_appointments_table" class="display" style="width: 100%">
+		<thead>
+			<tr>
+				<th>Patient</th>
+				<th>Date Of Birth</th>
+				<th>Country</th>
+				<th>Appointment Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for (var i = 0; i < data.length; i++) { %>
+				<tr>
+					<td><%= data[i].patient_name %></td>
+					<td><%= data[i].dob %></td>
+					<td><%= data[i].country %></td>
+					<td><%= data[i].appointment_date %></td>
+				</tr>
+			<% } %>
+		</tbody>
+	</table>
+

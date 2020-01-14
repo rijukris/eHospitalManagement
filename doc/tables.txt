@@ -1,0 +1,42 @@
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '....';
+FLUSH privileges;
+
+// select a.patient_email, a.appointment_date, b.first_name, b.last_name from appointment a left outer join doctor b on a.doctor_email=b.email where a.patient_email='jsmith@yahoo.com';
+
+select d.first_name, d.last_name, a.appointment_date from appointment a left outer join doctor d on a.doctor_email=d.email where a.patient_email='jsmith@yahoo.com';
+
+select p.first_name, p.last_name, a.appointment_date from appointment a left outer join patient p on a.patient_email=p.email where a.doctor_email='akris100@yahoo.com';
+
+DOCTOR table
+------------
+email VARCHAR(32) // primary key
+first_name VARCHAR(32)
+last_name VARCHAR(32)
+dob VARCHAR(16)
+gender VARCHAR(8)
+specialization VARCHAR(64)
+mobile VARCHAR(16)
+password VARCHAR(32)
+
+CREATE TABLE DOCTOR (email VARCHAR(32), first_name VARCHAR(32), last_name VARCHAR(32), dob VARCHAR(16), gender VARCHAR(8), specialization VARCHAR(64), mobile VARCHAR(16), password VARCHAR(32), PRIMARY KEY (email)); 
+
+PATIENT table
+------------
+email VARCHAR(32) // primary key
+first_name VARCHAR(32)
+last_name VARCHAR(32)
+dob VARCHAR(16)
+gender VARCHAR(8)
+country VARCHAR(64)
+mobile VARCHAR(16)
+password VARCHAR(32)
+
+CREATE TABLE PATIENT (email VARCHAR(32), first_name VARCHAR(32), last_name VARCHAR(32), dob VARCHAR(16), gender VARCHAR(8), country VARCHAR(64), mobile VARCHAR(16), password VARCHAR(32), PRIMARY KEY (email)); 
+
+APPOINTMENT table
+-----------------
+doctor_email VARCHAR(32)
+patient_email VARCHAR(32)
+appointment_date VARCHAR(16)
+
+CREATE TABLE APPOINTMENT (doctor_email VARCHAR(32), patient_email VARCHAR(32), appointment_date VARCHAR(16)); 

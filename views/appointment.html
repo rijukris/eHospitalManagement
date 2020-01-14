@@ -1,0 +1,79 @@
+<html>
+<head>
+  	<style type="text/css">
+  		body
+  		{
+  			background-image: url("images/13978.jpg");
+  		}
+  		button
+  		{
+  			background-color: rgb(216, 218, 237);
+  			color: #2E304A;
+  			padding-top: 0.5%;
+  			padding-bottom: 0.5%;
+  			padding-left: 7%;
+  			padding-right: 7%;
+  			text-align: center;
+  			font-weight: bold;
+  		}
+  		button:focus
+  		{
+  			border: 1px solid blue;
+  		}
+		.continue
+		{
+			padding-left: 2%;
+			padding-top: 1.7%;
+			padding-bottom: 1.7%;
+			color: black;
+		}
+		.padd
+		{
+			padding-bottom: 2%;
+		}
+		input
+		{
+			width: 60%;
+		}
+		input:invalid 
+		{
+  			color: red;
+		}
+		select
+		{
+			width: 70%;
+		}
+
+	</style>
+</head>
+<body>
+	<form id="appointmentform">
+		<div class="continue" style="background-color:grey; margin-top: 1.45%; margin-left: 25%; margin-right: 25%;">
+		<fieldset>
+		<legend><b>Doctor Appointment Form</b></legend>
+			<div class="padd">
+			<label>Patient</label><br>
+			<input type="text" id="patient" name="patient" value="" disabled>
+			</div>
+			<div class="padd">
+			<input type="text" id="patient_email" name="patient_email" value="" style="display: none">
+			</div>
+			<div class="padd">
+				<label>Doctor</label><br>
+				<span>
+				<select id="doctor_list" name="doctor_list" required>
+				</select>
+				</span>
+			</div>
+			<div class="padd">
+				<span>
+				<label>Appointment Date</label><br>
+				<input type="date" name="appointment_date">
+				</span>
+			</div>
+			<button class="btn btn-primary" type="submit" id="appointmentform_submit">Confirm</button>
+		</fieldset>	
+		</div>
+	</form>
+</body>
+</html>

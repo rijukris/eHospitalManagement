@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    
+  .navbar{
+    color: #0A1172;
+  }
+  
+  .navbar a:hover{
+    background-color: navy;
+    color: white;
+  }
+	
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+#ul1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+
+#ul1 li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#ul1 li a:hover {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+}
+.patientmain {
+  flex: 80%;
+  background-color: white;
+  padding-right: 20px;
+  color: black;
+}
+
+.profile {
+  color: #000;
+}
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="side">
+	<div class="profile">
+	Hello <b><%= data.first_name %> <%= data.last_name %></b>
+	</div>
+	<br>
+  	<h4>Menu</h4>
+    <ul id="ul1">
+      <li><a href="#" id="patient_book_appointment" data-patient="<%= JSON.stringify(data) %>">Book Appointment</a></li>
+      <li><a href="#" id="patient_appointment_history" data-patient_email="<%= data.email %>">Appointment History</a></li>
+      <li><a href="#" id="patient_profile" data-patient_email="<%= data.email %>">My Profile</a></li>
+      <li><a href="#" id="logout">Logout</a></li>
+    </ul>  
+  </div>
+
+  <div id="patientmain" class="patientmain">
+    <h2 style="text-align: center; color: #2E304A; margin-bottom: 2%;">We specialize in </h2>
+    <div class="fakeimg" style="height:200px;">
+      <a href="#"><img style="margin-left: 6%; " src="images/gp.jpg" width="25%" height="100%"></a>
+      <a href="#"><img style="margin-left: 6%; " src="images/dentist.jpg" width="25%" height="100%"></a>
+      <a href="#"><img style="margin-left: 6%; " src="images/gyne.jpg" width="25%" height="100%"></a> 
+    </div>
+    <h6 style="margin-top: 1%;">
+    <span style="margin-left: 12%; color: #800020;">
+      Physical Examination
+    </span>
+    <span style="margin-left: 20%; color: #800020;">
+      Dentistry
+    </span>
+    <span style="margin-left: 24%; color: #800020;">
+      Gynecology
+    </span>
+    </h6>
+    <div class="fakeimg" style="height:200px; margin-top: 4%;">
+      <a href="#"><img style="margin-left: 16%; " src="images/ent.jpg" width="25%" height="100%"></a>
+      <a href="#"><img style="margin-left: 16%; " src="images/derma.jpg" width="25%" height="100%"></a>
+    </div>
+    <h6 style="margin-top: 1%;">
+    <span style="margin-left: 23%; color: #800020;">
+      Otolaryngology
+    </span>
+    <span style="margin-left: 31%; color: #800020;">
+      Dermatology
+    </span>
+    </h6>
+  </div>
+</div>
+</body>
+</html>

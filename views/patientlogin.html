@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<style type="text/css">
+		body
+  		{
+  			background-color: rgb(247,248,249);
+  		}
+  		.loginn
+  		{
+  			background-color: #e3d8dc;
+  			margin-top: 2%;
+  			margin-left: 35%;
+  			margin-right: 37%;
+  			padding: 2%; 
+  			color: #2E304A;
+  			font-family: 'Bitter',serif;
+  			font-weight: bold;
+  			font-size: 15px;
+  		}
+		.inputcontainer i 
+		{ 
+            position: absolute; 
+        } 
+          
+        .inputcontainer 
+        { 
+            width: 100%; 
+            margin-bottom: 10px; 
+        } 
+          
+        .icon 
+        { 
+            padding: 5px; 
+            color: #2E304A; 
+            min-width: 25px; 
+            text-align: center; 
+        } 
+        .inputcontent 
+        {
+        	padding-left: 25px;
+        	width: 100%;
+        }
+        button
+  		{
+  			background-color: #2E304A;
+  			color: white;
+  			padding-top: 0.5%;
+  			padding-bottom: 0.5%;
+  			padding-left: 5%;
+  			padding-right: 5%;
+  			text-align: center;
+  			margin-left: 36%;
+  		}
+        button:focus
+  		{
+  			border: 1px solid blue;
+  		}
+  		.signup
+  		{
+  			margin-top: 2%;
+  			margin-left: 40%;
+  			margin-right: 40%;
+  			color: #2E304A;
+  			font-family: 'Bitter',serif;
+  			font-weight: bold;
+  			font-size: 15px;
+  		}
+	</style>
+</head>
+<body>
+	<div style="margin-left: 42%; margin-right: 40%; margin-top: 9%; ">
+		<img src="images/ehosp.png" width="50" height="50"><span style="font-weight: bold; font-family: 'Bitter', serif; font-size: 22px; color: #2E304A;">Patient login</span>
+	</div>
+	<form id="patientloginform">
+	<div class="loginn">
+		<label>Username</label><br>
+		<div class="inputcontainer">
+			<i class="fa fa-user icon"></i>
+			<input class="inputcontent" name="email" placeholder="Email Id" pattern="{1,40}" title="Doctor's email id must contain only letters, digits and @ with a minimum of 1 and maximum of 40 characters">
+		</div>
+		<br>
+		<label>Password</label><br>
+		<div class="inputcontainer">
+			<i class="fa fa-key icon"></i> 
+            <input class="inputcontent" type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number, one uppercase and lowercase letters and at least 8 or more characters">
+		</div>
+		<span>
+			<input type="checkbox" name="remember"><label>&nbsp;Remember me</label>
+			<button type="submit" id="patientloginform_submit">Log In</button>
+		</span>
+	</div>
+	<div class="signup">
+		Don't have an account?<a id="patientsignup"> Sign up</a>
+	</div>
+	</form>
+</body>
+</html>
